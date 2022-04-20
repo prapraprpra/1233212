@@ -9,7 +9,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var buttons: UIStackView!
     
-    @IBOutlet weak var buttonChangeResultLabel: UIStepper!
+    @IBOutlet weak var buttonChangeResultLabel: UILabel!
     
     var numberOne = ""
     var numberTwo = ""
@@ -18,7 +18,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         // Do any additional setup after loading the view.        }
+        
+        
+        
         @IBAction func inputNumber(_ sender: UIButton) {
             if operand.isEmpty{
                 numberOne = numberOne +
@@ -31,12 +36,14 @@ class ViewController: UIViewController {
                 resultLabel.text = numberTwo
             }
         
+            
             func clearAction(_ sender: UIButton) {
             numberOne = ""
             numberTwo = ""
             operand = ""
             resultLabel.text = "0"
         }
+            
             func result(_ sender: UIButton) {
             var result = 0.0
             
